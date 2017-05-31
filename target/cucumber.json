@@ -1,0 +1,219 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1745811495,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enter \"http://qaerp.franciscanecare.net\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://qaerp.franciscanecare.net",
+                  "offset": 12
+                }
+              ],
+              "location": "MyStepDefs.user_enter(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 158361600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enter username \"admin\" and password \"Admin#franciscan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 21
+                },
+                {
+                  "val": "Admin#franciscan",
+                  "offset": 42
+                }
+              ],
+              "location": "MyStepDefs.user_enter_username_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72725,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "passes school name \"qaerp\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "qaerp",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepDefs.passes_school_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2452598995,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "click signin",
+            "match": {
+              "location": "MyStepDefs.click_signin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 257482830,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "attendance home page is opened",
+            "match": {
+              "location": "MyStepDefs.attendance_home_page_is_opened()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 54,
+            "value": "#session transfer"
+          }
+        ],
+        "before": [
+          {
+            "result": {
+              "duration": 5071455529,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyStepDefs.launchBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 56,
+        "name": "To verify session transfer page",
+        "description": "",
+        "id": "franciscan-attendance;to-verify-session-transfer-page",
+        "after": [
+          {
+            "result": {
+              "duration": 3203645516,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyStepDefs.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1096093465,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "user open session transfer page",
+            "match": {
+              "location": "MyStepDefs.user_open_session_transfer_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1330489923,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "verify session transfer page",
+            "match": {
+              "location": "MyStepDefs.verify_session_transfer_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1336643396,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "verify account manager",
+            "match": {
+              "location": "MyStepDefs.verify_account_manager()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1098751740,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "verify fee manager",
+            "match": {
+              "location": "MyStepDefs.verify_fee_manager()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1059996064,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "verify payroll manager",
+            "match": {
+              "location": "MyStepDefs.verify_payroll_manager()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1156947568,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "verify admission manager",
+            "match": {
+              "location": "MyStepDefs.verify_admission_manager()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 55,
+            "name": "@scenario8"
+          }
+        ]
+      }
+    ],
+    "name": "Franciscan Attendance",
+    "description": "    As a user I would like to verify that \r\n    The page is loaded successfully",
+    "id": "franciscan-attendance",
+    "keyword": "Feature",
+    "uri": "Feature/VerifyPage.feature"
+  }
+]
