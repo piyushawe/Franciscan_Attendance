@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
 	    ,plugin= {"pretty","html:target/cucumber_html_report",
 	    		  "json:target/cucumber.json",
 	    	      "junit:target/cucumber.xml"}		
-		,tags= {"@scenario34"}
+		//,tags= {"@scenario34"}
 	)
 public class ReportsRunner {
 

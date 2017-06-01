@@ -3,9 +3,9 @@ Feature: Franciscan Attendance
       The page is loaded successfully
 
   Background: 
-    Given user enter "http://qaerp.franciscanecare.net"
-    When user enter username "admin" and password "Admin#franciscan"
-    And passes school name "qaerp"
+    Given user enter " http://192.168.10.101:8069/Modules.aspx"
+    When user enter username "admin" and password "admin@123"
+    And passes school name "rosary"
     And click signin
     Then attendance home page is opened
 
