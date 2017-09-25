@@ -1,16 +1,487 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="19.968351">
-<testcase classname="Franciscan Attendance" name="To verify session transfer page" time="19.968351">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="34" time="966.262811">
+<testcase classname="Attendance reports" name="To open late in early out report with all" time="29.514153">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: Element &lt;input id=&quot;ContentPlaceHolder1_rdbforcondition_0&quot; type=&quot;radio&quot; name=&quot;ctl00$ContentPlaceHolder1$rdbforcondition&quot; value=&quot;0&quot; checked=&quot;checked&quot;&gt; is not clickable at point (134, 218). Other element would receive the click: &lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;jQuery.datepick._clearDate('#ContentPlaceHolder1_txtenddate_TextBox');&quot;&gt;...&lt;/a&gt;&#10;  (Session info: chrome=60.0.3112.113)&#10;  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 51 milliseconds&#10;Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'&#10;System info: host: 'DELL-PC', ip: '192.168.10.49', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\dell\AppData\Local\Temp\scoped_dir4224_20430}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 4ee017e0cf63300b37780c346c19289f&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)&#13;&#10;&#9;at pageObjects.LateInEarlyOutReport.selectLateInEarlyOut(LateInEarlyOutReport.java:59)&#13;&#10;&#9;at stepDefs.MyStepDefs.select_on_late_in_early_out_report(MyStepDefs.java:127)&#13;&#10;&#9;at ✽.And select &quot;all&quot; on late in early out report(Feature/Reports.feature:18)&#13;&#10;"><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open late in early out report.....................................passed
+And select from date as month "April" year "2017" and day "1" on late in early out report.passed
+And select to date as month "May" year "2017" and day "31" on late in early out report.passed
+And select "all" on late in early out report................................failed
+Then click show to open late in early out report............................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: Element <input id="ContentPlaceHolder1_rdbforcondition_0" type="radio" name="ctl00$ContentPlaceHolder1$rdbforcondition" value="0" checked="checked"> is not clickable at point (134, 218). Other element would receive the click: <a href="javascript:void(0)" onclick="jQuery.datepick._clearDate('#ContentPlaceHolder1_txtenddate_TextBox');">...</a>
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 51 milliseconds
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'DELL-PC', ip: '192.168.10.49', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\dell\AppData\Local\Temp\scoped_dir4224_20430}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 4ee017e0cf63300b37780c346c19289f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.LateInEarlyOutReport.selectLateInEarlyOut(LateInEarlyOutReport.java:59)
+	at stepDefs.MyStepDefs.select_on_late_in_early_out_report(MyStepDefs.java:127)
+	at ✽.And select "all" on late in early out report(Feature/Reports.feature:18)
+]]></failure>
+</testcase>
+<testcase classname="Attendance reports" name="To open late in early out report with only late in early out" time="36.156374">
 <system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
 When user enter username "admin" and password "Admin#franciscan"............passed
 And passes school name "qaerp"..............................................passed
 And click signin............................................................passed
 Then attendance home page is opened.........................................passed
-When user open session transfer page........................................passed
-Then verify session transfer page...........................................passed
-And verify account manager..................................................passed
-And verify fee manager......................................................passed
-And verify payroll manager..................................................passed
-And verify admission manager................................................passed
+When user open late in early out report.....................................passed
+And select from date as month "April" year "2017" and day "1" on late in early out report.passed
+And select to date as month "May" year "2017" and day "31" on late in early out report.passed
+And select "only late in early out" on late in early out report.............passed
+Then click show to open late in early out report............................passed
 ]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open late in early out report with only late in" time="27.742325">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open late in early out report.....................................passed
+And select from date as month "April" year "2017" and day "1" on late in early out report.passed
+And select to date as month "May" year "2017" and day "31" on late in early out report.passed
+And select "only late in" on late in early out report.......................passed
+Then click show to open late in early out report............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open late in early out report with only early out" time="81.149917">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open late in early out report.....................................passed
+And select from date as month "April" year "2017" and day "1" on late in early out report.passed
+And select to date as month "May" year "2017" and day "31" on late in early out report.passed
+And select "only early out" on late in early out report.....................passed
+Then click show to open late in early out report............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open attendance report monthly wise" time="22.964407">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open attendance report monthly wise page..........................passed
+And select month year "April - 2017" on late in early out report............passed
+Then click show to open attendance report monthly wise......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open lwp yearwise report" time="20.928662">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open lwp yearwise report page.....................................passed
+And select academic year "2017-2018" on lwp yearwise report.................passed
+Then click show to open lwp yearwise report.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open attendance consolidated report with consolidated list" time="27.601057">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open attendance consolidated report...............................passed
+And select from date as month "April" year "2017" and day "1" on attendance consolidated report.passed
+And select to date as month "May" year "2017" and day "31" on attendance consolidated report.passed
+And select "consolidated list" on attendance consolidated report............passed
+Then click show to open attendance consolidated report......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open attendance consolidated report with all late entry list" time="29.233128">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open attendance consolidated report...............................passed
+And select from date as month "April" year "2017" and day "1" on attendance consolidated report.passed
+And select to date as month "May" year "2017" and day "31" on attendance consolidated report.passed
+And select "all late entry list" on attendance consolidated report..........passed
+Then click show to open attendance consolidated report......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open attendance consolidated report with proper late entry list" time="29.976538">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open attendance consolidated report...............................passed
+And select from date as month "April" year "2017" and day "1" on attendance consolidated report.passed
+And select to date as month "May" year "2017" and day "31" on attendance consolidated report.passed
+And select "proper late entry list" on attendance consolidated report.......passed
+Then click show to open attendance consolidated report......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open attendance consolidated report with early exit list" time="34.853804">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open attendance consolidated report...............................passed
+And select from date as month "April" year "2017" and day "1" on attendance consolidated report.passed
+And select to date as month "May" year "2017" and day "31" on attendance consolidated report.passed
+And select "early exit list" on attendance consolidated report..............passed
+Then click show to open attendance consolidated report......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open staff wise daily attendance report" time="35.439812">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open staff wise daily attendance report...........................passed
+And select from date as month "April" year "2017" and day "1" on staff wise daily attendance report.passed
+And select to date as month "May" year "2017" and day "31" on staff wise daily attendance report.passed
+Then click show to open staff wise daily attendance report..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open absent missing attendance report with all" time="30.856563">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open absent missing attendance report.............................passed
+And select from date as month "April" year "2017" and day "1" on absent missing attendance report.passed
+And select to date as month "May" year "2017" and day "31" on absent missing attendance report.passed
+And select "all" on absent missing attendance report........................passed
+Then click show to open absent missing attendance report....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open absent missing attendance report with only absent" time="32.296618">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open absent missing attendance report.............................passed
+And select from date as month "April" year "2017" and day "1" on absent missing attendance report.passed
+And select to date as month "May" year "2017" and day "31" on absent missing attendance report.passed
+And select "only absent" on absent missing attendance report................passed
+Then click show to open absent missing attendance report....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open absent missing attendance report with only missing" time="37.518387">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open absent missing attendance report.............................passed
+And select from date as month "April" year "2017" and day "1" on absent missing attendance report.passed
+And select to date as month "May" year "2017" and day "31" on absent missing attendance report.passed
+And select "only missing" on absent missing attendance report...............passed
+Then click show to open absent missing attendance report....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open biometrics attendance detail department wise" time="30.707866">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open biometrics attendance detail department wise.................passed
+And select from date as month "April" year "2017" and day "1" on biometrics attendance detail department wise.passed
+And select to date as month "May" year "2017" and day "31" on biometrics attendance detail department wise.passed
+Then click show to open biometrics attendance detail department wise........passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open staff shift relation report" time="21.248913">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open staff shift relation report..................................passed
+Then click show to open staff shift relation report.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open weekly attendance report" time="29.051642">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open weekly attendance report.....................................passed
+And select from date as month "April" year "2017" and day "1" on weekly attendance report.passed
+And select to date as month "May" year "2017" and day "31" on weekly attendance report.passed
+Then click show to open weekly attendance report............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open monthly attendance report" time="25.263224">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open monthly attendance report....................................passed
+And select month year "April - 2017" on monthly attendance report...........passed
+Then click show to open monthly attendance report...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open daily performance report" time="30.474872">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open daily performance report.....................................passed
+Then click show to open daily performance report............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open leave format report" time="11.598425">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Leave Format Report&quot;}&#10;  (Session info: chrome=60.0.3112.113)&#10;  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 37 milliseconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'&#10;System info: host: 'DELL-PC', ip: '192.168.10.49', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\dell\AppData\Local\Temp\scoped_dir7152_584}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 87c2e923fab7118ed58bdfdbd1a47b1c&#10;*** Element info: {Using=link text, value=Leave Format Report}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)&#13;&#10;&#9;at pageObjects.LeaveFormatReport.openLeaveFormatReport(LeaveFormatReport.java:33)&#13;&#10;&#9;at stepDefs.MyStepDefs.user_open_leave_format_report(MyStepDefs.java:360)&#13;&#10;&#9;at ✽.When user open leave format report(Feature/Reports.feature:175)&#13;&#10;"><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open leave format report..........................................failed
+And select month year "April - 2017" on leave format report.................skipped
+Then click show to open leave format report.................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Leave Format Report"}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 37 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'DELL-PC', ip: '192.168.10.49', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\dell\AppData\Local\Temp\scoped_dir7152_584}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 87c2e923fab7118ed58bdfdbd1a47b1c
+*** Element info: {Using=link text, value=Leave Format Report}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at pageObjects.LeaveFormatReport.openLeaveFormatReport(LeaveFormatReport.java:33)
+	at stepDefs.MyStepDefs.user_open_leave_format_report(MyStepDefs.java:360)
+	at ✽.When user open leave format report(Feature/Reports.feature:175)
+]]></failure>
+</testcase>
+<testcase classname="Attendance reports" name="To open attendance report" time="28.332921">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open attendance report............................................passed
+And select from date as month "April" year "2017" and day "1" on attendance report.passed
+And select to date as month "May" year "2017" and day "31" on attendance report.passed
+Then click show to open attendance report...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open attendance analysis report" time="37.163564">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open attendance analysis report...................................passed
+And select from date as month "April" year "2017" and day "1" on attendance analysis report.passed
+And select to date as month "May" year "2017" and day "31" on attendance analysis report.passed
+Then click show to open attendance analysis report..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open attendance analysis report with exclude graph" time="34.808663">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open attendance analysis report...................................passed
+And select from date as month "April" year "2017" and day "1" on attendance analysis report.passed
+And select to date as month "May" year "2017" and day "31" on attendance analysis report.passed
+And select exclude graph on attendance analysis report......................passed
+Then click show to open attendance analysis report..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open leave balance report" time="19.360251">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open leave balance report.........................................passed
+And select from month year "April - 2017" on leave balance report...........passed
+And select to month year "May - 2017" on leave balance report...............passed
+Then click show to open leave balance report................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open sanctioned leave report" time="30.219844">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open sanctioned leave report......................................passed
+And select from date as month "April" year "2017" and day "1" on sanctioned leave report.passed
+And select to date as month "May" year "2017" and day "31" on sanctioned leave report.passed
+Then click show to open sanctioned leave report.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open leave card report" time="22.115212">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open leave card report............................................passed
+And select year "2017-2018" on leave card report............................passed
+Then click show to open leave card report...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open monthly performance report" time="27.335067">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open monthly performance report...................................passed
+And select from date as month "April" year "2017" and day "1" on monthly performance report.passed
+And select to date as month "May" year "2017" and day "31" on monthly performance report.passed
+Then click show to open monthly performance report..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open leave ledger report" time="23.487598">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open leave ledger report..........................................passed
+And select year "2017-2018" on leave ledger report..........................passed
+Then click show to open leave ledger report.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open leave register report" time="19.061559">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open leave register report........................................passed
+And select year "2017-2018" on leave register report........................passed
+Then click show to open leave register report...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open leave bucket report with active status" time="23.086202">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open leave bucket report..........................................passed
+And select month year "April - 2017" on leave bucket report.................passed
+And select employee status "active" on leave bucket report..................passed
+Then click show to open leave bucket report.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open leave bucket report with inactive status" time="20.573729">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open leave bucket report..........................................passed
+And select month year "April - 2017" on leave bucket report.................passed
+And select employee status "inactive" on leave bucket report................passed
+Then click show to open leave bucket report.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open leave bucket report with all status" time="20.127295">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open leave bucket report..........................................passed
+And select month year "April - 2017" on leave bucket report.................passed
+And select employee status "all" on leave bucket report.....................passed
+Then click show to open leave bucket report.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open school staff attendance register" time="22.320035">
+<system-out><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open school staff attendance register.............................passed
+And select month year "April - 2017" on school staff attendance register....passed
+Then click show to open school staff attendance register....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Attendance reports" name="To open monthly monthly late in count report" time="13.694184">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Monthly Late In Count Report&quot;}&#10;  (Session info: chrome=60.0.3112.113)&#10;  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 40 milliseconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'&#10;System info: host: 'DELL-PC', ip: '192.168.10.49', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\dell\AppData\Local\Temp\scoped_dir3584_6281}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: b6a5e6e2d14082b0a895c761bc3458c6&#10;*** Element info: {Using=link text, value=Monthly Late In Count Report}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)&#13;&#10;&#9;at pageObjects.MonthlyLateInCountReport.openMonthlyLateInCountReport(MonthlyLateInCountReport.java:34)&#13;&#10;&#9;at stepDefs.MyStepDefs.user_open_monthly_monthly_late_in_count_report(MyStepDefs.java:613)&#13;&#10;&#9;at ✽.When user open monthly monthly late in count report(Feature/Reports.feature:316)&#13;&#10;"><![CDATA[Given user enter "http://qaerp.franciscanecare.net".........................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then attendance home page is opened.........................................passed
+When user open monthly monthly late in count report.........................failed
+And select from date as month "April" year "2017" and day "1" on monthly late in count report.skipped
+And select to date as month "May" year "2017" and day "31" on monthly late in count report.skipped
+Then click show to open monthly late in count report........................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Monthly Late In Count Report"}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 40 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'DELL-PC', ip: '192.168.10.49', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\dell\AppData\Local\Temp\scoped_dir3584_6281}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: b6a5e6e2d14082b0a895c761bc3458c6
+*** Element info: {Using=link text, value=Monthly Late In Count Report}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at pageObjects.MonthlyLateInCountReport.openMonthlyLateInCountReport(MonthlyLateInCountReport.java:34)
+	at stepDefs.MyStepDefs.user_open_monthly_monthly_late_in_count_report(MyStepDefs.java:613)
+	at ✽.When user open monthly monthly late in count report(Feature/Reports.feature:316)
+]]></failure>
 </testcase>
 </testsuite>

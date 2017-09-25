@@ -58,6 +58,7 @@ public class AttendanceAnalysisReport {
   }
   public void clickAnalyze(String sch, Collection<String>sc) throws IOException, InterruptedException {
 	  analyze.click();
+      u.verifyShow(dr, sch, r, sc);
 	  Thread.sleep(4000);
 	  u.captureScreenshot(dr, sch, r,sc);
   }

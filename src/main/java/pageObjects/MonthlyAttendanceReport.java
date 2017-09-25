@@ -43,6 +43,7 @@ public class MonthlyAttendanceReport {
   }
   public void clickShow(String sch, Collection<String>sc) throws IOException, InterruptedException {
 	  show.click();
+      u.verifyShow(dr, sch, r, sc);
 	  Thread.sleep(4000);
 	  u.captureScreenshot(dr, sch, r,sc);
   }
