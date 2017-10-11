@@ -75,6 +75,7 @@ public class MyStepDefs {
 	  Thread.sleep(2000);
 	  dr.quit();
   }
+
 	@Given("^user enter \"([^\"]*)\"$")
 	public void user_enter(String arg1) throws Throwable {
 	    dr.get(arg1);
